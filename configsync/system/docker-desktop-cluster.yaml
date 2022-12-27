@@ -6,6 +6,7 @@ metadata:
 spec:
   git:
     syncRepo: https://github.com/amtptl1611/gcp-config-sync.git
+    revision: HEAD
     syncBranch: master
     secretType: ssh
     policyDir: "configsync"
