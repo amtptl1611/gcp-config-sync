@@ -1,12 +1,11 @@
-apiVersion: configsync.gke.io/v1alpha1
+apiVersion: configsync.gke.io/v1beta1
 kind: RootSync
 metadata:
   name: root-sync
   namespace: config-management-system
 spec:
+  sourceFormat: unstructured
   git:
-    syncRepo: https://github.com/amtptl1611/gcp-config-sync.git
-    revision: HEAD
-    syncBranch: master
-    secretType: ssh
-    policyDir: "configsync"
+    repo: https://github.com/amtptl1611/gcp-config-sync.git
+    dir: "configsync"
+    auth: none
